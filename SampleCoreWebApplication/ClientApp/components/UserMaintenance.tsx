@@ -11,7 +11,7 @@ export class UserMaintenance extends React.Component<RouteComponentProps<{}>, Us
         super();
         this.state = { users: [], loading: true };
 
-        fetch('api/SampleData/Users')
+        fetch('api/UserMaintenance/Users')
             .then(response => response.json() as Promise<User[]>)
             .then(data => {
                 this.setState({ users: data, loading: false });
